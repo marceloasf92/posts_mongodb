@@ -1,4 +1,4 @@
-import postSchema from "../schema/post.schema";
+import postSchema from "../schema/post.schema.js";
 
 export default class PostController {
   async create(req, res) {

@@ -1,11 +1,6 @@
-const axios = require("axios");
-const postSchema = require("./src/schema/post.schema");
-require("./src/database/mongodb");
-
-const config = {
-  url: "https://jsonplaceholder.typicode.com/posts",
-  method: "GET",
-};
+import axios from "axios";
+import postSchema from "./src/schema/post.schema.js";
+import "./src/database/mongodb.js";
 
 const createPost = (response) => {
   if (response.data.length > 0) {
@@ -13,6 +8,7 @@ const createPost = (response) => {
   }
 };
 
-axios(config)
+axios
+  .get("https://jsonplaceholder.typicode.com/posts")
   .then(createPost)
   .catch((err) => console.log(err));

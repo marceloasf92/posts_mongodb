@@ -18,5 +18,6 @@
   },
   "devDependencies": {
     "sucrase": "^3.27.0"
-  }
+  },
+  "type": "module"
 }
